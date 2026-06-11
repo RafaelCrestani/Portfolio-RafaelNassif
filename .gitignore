@@ -1,0 +1,13 @@
+# ferramentas locais (binário de 54MB, não vai pro repo)
+tools/
+
+# config interna do Claude Code
+.claude/
+
+# documentos de trabalho
+docs/
+
+# sistema
+Thumbs.db
+.DS_Store
+__pycache__/

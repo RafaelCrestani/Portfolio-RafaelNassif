@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rafael Nassif — UX/UI & Product Designer</title>
+  <meta name="description" content="Rafael Nassif Crestani — UX/UI & Product Designer com 5+ anos de experiência. Design systems, pesquisa, prototipação e código. São Paulo, Brasil." />
+  <meta property="og:title" content="Rafael Nassif — UX/UI & Product Designer" />
+  <meta property="og:description" content="Portfólio — design de produto com a precisão de quem já esteve do outro lado: o código." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff4d00'/%3E%3Ctext x='32' y='43' font-family='Arial Black, sans-serif' font-size='30' font-weight='900' text-anchor='middle' fill='%230d0b09'%3ERN%3C/text%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css?v=2" />
+  <script>
+    document.documentElement.classList.add('js');
+    // Animações ligadas por padrão. ?motion=off entrega a versão estática
+    // (acessibilidade explícita — o hint do SO no Windows é desligado por
+    // perfis de desempenho sem o usuário saber, então não o usamos como gate).
+    if (new URLSearchParams(location.search).get('motion') === 'off') {
+      document.documentElement.classList.add('motion-off');
+    }
+  </script>
+</head>
+<body data-barba="wrapper">
+
+  <!-- ============ PRELOADER ============ -->
+  <div class="preloader" aria-hidden="true">
+    <div class="preloader__inner">
+      <span class="preloader__name label">Rafael Nassif Crestani</span>
+      <span class="preloader__count" data-preloader-count>0</span>
+      <span class="preloader__tag label">portfólio — v.2026</span>
+    </div>
+    <div class="preloader__bar"><span data-preloader-bar></span></div>
+  </div>
+
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- ============ CURSOR ============ -->
+  <div class="cursor" aria-hidden="true">
+    <div class="cursor__dot"></div>
+    <div class="cursor__ring"></div>
+  </div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header">
+    <a href="#hero" class="header__logo" data-nav-link aria-label="Voltar ao início">
+      <span class="header__logo-mark">RN</span><span class="header__logo-c">©26</span>
+    </a>
+
+    <nav class="header__nav" aria-label="Navegação principal">
+      <a href="#sobre" data-nav-link>Sobre<sup>01</sup></a>
+      <a href="#experiencia" data-nav-link>Experiência<sup>02</sup></a>
+      <a href="#cases" data-nav-link>Cases<sup>03</sup></a>
+      <a href="#skills" data-nav-link>Skills<sup>04</sup></a>
+      <a href="#contato" data-nav-link>Contato<sup>05</sup></a>
+    </nav>
+
+    <div class="header__meta label">
+      <span class="header__dot" aria-hidden="true"></span>
+      <span>São Paulo&nbsp;·&nbsp;<span data-clock>--:--</span></span>
+    </div>
+
+    <button class="header__burger" data-menu-toggle aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-overlay">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ============ MENU MOBILE ============ -->
+  <div class="menu" id="menu-overlay" aria-hidden="true">
+    <div class="menu__bg"></div>
+    <nav class="menu__nav" aria-label="Menu">
+      <a href="#sobre" data-nav-link><em>01</em>Sobre</a>
+      <a href="#experiencia" data-nav-link><em>02</em>Experiência</a>
+      <a href="#cases" data-nav-link><em>03</em>Cases</a>
+      <a href="#skills" data-nav-link><em>04</em>Skills</a>
+      <a href="#contato" data-nav-link><em>05</em>Contato</a>
+    </nav>
+    <div class="menu__foot label">
+      <a href="mailto:rafael.nassifcrestani@gmail.com">rafael.nassifcrestani@gmail.com</a>
+      <a href="https://www.linkedin.com/in/rafael-nassif-crestani/" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+  </div>
+
+  <main id="conteudo">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <canvas class="hero__canvas" id="webgl" aria-hidden="true"></canvas>
+      <div class="hero__grain" aria-hidden="true"></div>
+
+      <div class="hero__frame label" aria-hidden="true">
+        <span class="hero__frame-item hero__frame-item--tl">portfólio — v.2026<i class="tick"></i></span>
+        <span class="hero__frame-item hero__frame-item--tr"><i class="tick"></i>21.49° S&nbsp;/&nbsp;49.69° W</span>
+      </div>
+
+      <div class="hero__content">
+        <p class="hero__kicker label" data-hero-kicker>
+          <span class="hero__status-dot" aria-hidden="true"></span>
+          disponível para novos projetos
+        </p>
+
+        <h1 class="hero__title" aria-label="Rafael Nassif">
+          <span class="hero__line"><span data-split-chars>RAFAEL</span><span class="hero__star" aria-hidden="true">✦</span></span>
+          <span class="hero__line hero__line--outline"><span data-split-chars>NASSIF</span></span>
+        </h1>
+
+        <div class="hero__sub">
+          <p class="hero__role" data-hero-role>UX/UI <em>&amp;</em> Product Designer</p>
+          <p class="hero__desc" data-hero-desc>
+            Desenho produtos digitais que unem pesquisa, design&nbsp;systems
+            e código — do wireframe ao deploy.
+          </p>
+        </div>
+      </div>
+
+      <div class="hero__bottom label" aria-hidden="true">
+        <span class="hero__scroll">scroll<span class="hero__scroll-line"></span></span>
+        <span class="hero__coords">design × engenharia — desde 2018</span>
+      </div>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track" data-marquee>
+        <span>UX Research <i>✦</i> UI Design <i>✦</i> Design Systems <i>✦</i> Prototipagem <i>✦</i> Testes de Usabilidade <i>✦</i> Design Thinking <i>✦</i> Front-end <i>✦</i>&nbsp;</span>
+        <span>UX Research <i>✦</i> UI Design <i>✦</i> Design Systems <i>✦</i> Prototipagem <i>✦</i> Testes de Usabilidade <i>✦</i> Design Thinking <i>✦</i> Front-end <i>✦</i>&nbsp;</span>
+      </div>
+    </div>
+
+    <!-- ============ SOBRE ============ -->
+    <section class="section about" id="sobre">
+      <header class="sec-head">
+        <span class="sec-head__index label">01</span>
+        <h2 class="sec-head__title">Sobre</h2>
+        <span class="sec-head__rule" aria-hidden="true"></span>
+        <span class="sec-head__meta label">// perfil</span>
+      </header>
+
+      <p class="about__statement" data-split-words>
+        Desenho produtos digitais com a precisão de quem já esteve
+        do outro lado: <strong>o código.</strong>
+      </p>
+
+      <div class="about__grid">
+        <div class="about__col" data-reveal>
+          <p>
+            Olá! Sou um designer de produtos apaixonado por criar experiências
+            inovadoras e impactantes. São mais de <strong>5 anos</strong> unindo
+            competências técnicas e criativas para impulsionar o sucesso de
+            empresas e usuários — de pesquisas e entrevistas a design systems
+            e protótipos de alta fidelidade.
+          </p>
+          <p>
+            Antes do design, fui <strong>desenvolvedor Java</strong> em um ERP de
+            documentos fiscais eletrônicos. Essa bagagem me dá uma visão
+            holística da interseção entre design e tecnologia — eu desenho
+            sabendo exatamente como aquilo vai ser construído.
+          </p>
+        </div>
+
+        <aside class="about__side" data-reveal>
+          <ul class="about__facts label">
+            <li><span>base</span><b>José Bonifácio — SP, Brasil</b></li>
+            <li><span>foco</span><b>Produto · DS · Pesquisa</b></li>
+            <li><span>método</span><b>Double Diamond · Scrum</b></li>
+            <li><span>idiomas</span><b>Português · Inglês (avançado)</b></li>
+          </ul>
+        </aside>
+      </div>
+
+      <div class="stats" role="list">
+        <div class="stats__item" role="listitem" data-reveal>
+          <span class="stats__num"><span data-counter="5">0</span>+</span>
+          <span class="stats__label label">anos de produto digital</span>
+        </div>
+        <div class="stats__item" role="listitem" data-reveal>
+          <span class="stats__num"><span data-counter="5">0</span></span>
+          <span class="stats__label label">empresas — de fintech a educação</span>
+        </div>
+        <div class="stats__item" role="listitem" data-reveal>
+          <span class="stats__num"><span data-counter="6">0</span>+</span>
+          <span class="stats__label label">certificações &amp; bootcamps</span>
+        </div>
+        <div class="stats__item" role="listitem" data-reveal>
+          <span class="stats__num"><span data-counter="2">0</span></span>
+          <span class="stats__label label">idiomas — PT / EN</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIÊNCIA ============ -->
+    <section class="section xp" id="experiencia">
+      <header class="sec-head">
+        <span class="sec-head__index label">02</span>
+        <h2 class="sec-head__title">Experiência</h2>
+        <span class="sec-head__rule" aria-hidden="true"></span>
+        <span class="sec-head__meta label">// 2018 — hoje</span>
+      </header>
+
+      <ul class="xp__list">
+        <li class="xp__row" data-reveal>
+          <span class="xp__period label">abr 2025 — hoje</span>
+          <div class="xp__main">
+            <h3 class="xp__role">UX/UI Designer</h3>
+            <p class="xp__desc">Design system, testes de usabilidade, wireframes e prototipação em squads ágeis.</p>
+          </div>
+          <span class="xp__company">Orange Door IT</span>
+          <span class="xp__arrow" aria-hidden="true">→</span>
+        </li>
+
+        <li class="xp__row" data-reveal>
+          <span class="xp__period label">set 2023 — abr 2025</span>
+          <div class="xp__main">
+            <h3 class="xp__role">Instrutor — Técnico em Multimídia</h3>
+            <p class="xp__desc">Formação de novos designers: UX/UI, front-end (HTML/CSS), foto, vídeo e metodologias ágeis.</p>
+          </div>
+          <span class="xp__company">SENAI São Paulo</span>
+          <span class="xp__arrow" aria-hidden="true">→</span>
+        </li>
+
+        <li class="xp__row" data-reveal>
+          <span class="xp__period label">set 2022 — mar 2023</span>
+          <div class="xp__main">
+            <h3 class="xp__role">UX/UI Designer</h3>
+            <p class="xp__desc">Nova jornada data-driven de recuperação de crédito para usuários inadimplentes.</p>
+          </div>
+          <span class="xp__company">Boa Vista SCPC</span>
+          <span class="xp__arrow" aria-hidden="true">→</span>
+        </li>
+
+        <li class="xp__row" data-reveal>
+          <span class="xp__period label">set 2020 — set 2022</span>
+          <div class="xp__main">
+            <h3 class="xp__role">UX/UI Designer</h3>
+            <p class="xp__desc">Produtos para Claro Brasil (Técnico Nota 10, Minha Claro Residencial) e app de gestão PantheOn.</p>
+          </div>
+          <span class="xp__company">Accurate Software</span>
+          <span class="xp__arrow" aria-hidden="true">→</span>
+        </li>
+
+        <li class="xp__row" data-reveal>
+          <span class="xp__period label">jun 2018 — ago 2020</span>
+          <div class="xp__main">
+            <h3 class="xp__role">Desenvolvedor Java</h3>
+            <p class="xp__desc">Novas funcionalidades e correções em ERP de documentos fiscais eletrônicos — Java, SQL Server, HTML/CSS.</p>
+          </div>
+          <span class="xp__company">Soften Sistemas</span>
+          <span class="xp__arrow" aria-hidden="true">→</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ============ CASES ============ -->
+    <section class="section cases" id="cases">
+      <header class="sec-head">
+        <span class="sec-head__index label">03</span>
+        <h2 class="sec-head__title">Cases selecionados</h2>
+        <span class="sec-head__rule" aria-hidden="true"></span>
+        <span class="sec-head__meta label">// 2020 — 2023</span>
+      </header>
+
+      <div class="cases__grid">
+
+        <!-- Case 1 — Minha Claro Residencial -->
+        <article class="case" data-reveal data-tilt>
+          <div class="case__visual case__visual--claro" aria-hidden="true">
+            <div class="case-art case-art--route">
+              <span class="case-art__phone">
+                <svg viewBox="0 0 120 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="2" y="2" width="116" height="216" rx="18" class="art-stroke"/>
+                  <path d="M24 160 C 40 120, 70 150, 80 100 S 100 60, 96 48" class="art-route"/>
+                  <circle cx="24" cy="160" r="6" class="art-dot-a"/>
+                  <circle cx="96" cy="48" r="6" class="art-dot-b"/>
+                  <circle cx="96" cy="48" r="12" class="art-pulse"/>
+                </svg>
+              </span>
+            </div>
+            <span class="case__num label">c.01</span>
+          </div>
+          <div class="case__info">
+            <div class="case__top">
+              <h3 class="case__title">Minha Claro Residencial</h3>
+              <span class="case__year label">2022</span>
+            </div>
+            <p class="case__desc">Acompanhamento em tempo real do deslocamento do técnico até a casa do cliente — menos ansiedade, menos ligações ao suporte.</p>
+            <ul class="case__tags label">
+              <li>Mobile</li><li>Tempo real</li><li>Claro · Accurate</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Case 2 — Técnico Nota 10 -->
+        <article class="case" data-reveal data-tilt>
+          <div class="case__visual case__visual--nota10" aria-hidden="true">
+            <div class="case-art case-art--os">
+              <div class="art-card art-card--1"><i></i><i></i><b>OS-2210</b></div>
+              <div class="art-card art-card--2"><i></i><i></i><b>OS-2211</b></div>
+              <div class="art-card art-card--3"><i></i><i></i><b>OS-2212</b></div>
+              <span class="art-check">✓</span>
+            </div>
+            <span class="case__num label">c.02</span>
+          </div>
+          <div class="case__info">
+            <div class="case__top">
+              <h3 class="case__title">Técnico Nota 10</h3>
+              <span class="case__year label">2022</span>
+            </div>
+            <p class="case__desc">BackOffice de campo para técnicos da Claro: ordens de serviço, trajetos e inspeções em um fluxo único.</p>
+            <ul class="case__tags label">
+              <li>Field service</li><li>UX Flow</li><li>Claro · Accurate</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Case 3 — Recuperação de crédito -->
+        <article class="case" data-reveal data-tilt>
+          <div class="case__visual case__visual--bv" aria-hidden="true">
+            <div class="case-art case-art--score">
+              <svg viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 110 A 80 80 0 0 1 180 110" class="art-arc-bg"/>
+                <path d="M20 110 A 80 80 0 0 1 180 110" class="art-arc-fg" pathLength="100"/>
+                <line x1="100" y1="110" x2="148" y2="52" class="art-needle"/>
+                <circle cx="100" cy="110" r="5" class="art-dot-b"/>
+              </svg>
+              <span class="art-bars"><i></i><i></i><i></i><i></i><i></i></span>
+            </div>
+            <span class="case__num label">c.03</span>
+          </div>
+          <div class="case__info">
+            <div class="case__top">
+              <h3 class="case__title">Recuperação de Crédito</h3>
+              <span class="case__year label">2022–23</span>
+            </div>
+            <p class="case__desc">Jornada orientada a dados para reengajar usuários inadimplentes, priorizando quem tem mais propensão à recuperação.</p>
+            <ul class="case__tags label">
+              <li>Jornada</li><li>Data-driven</li><li>Boa Vista SCPC</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Case 4 — PantheOn -->
+        <article class="case" data-reveal data-tilt>
+          <div class="case__visual case__visual--pantheon" aria-hidden="true">
+            <div class="case-art case-art--kanban">
+              <div class="art-col"><span></span><i></i><i></i></div>
+              <div class="art-col"><span></span><i></i><i></i><i></i></div>
+              <div class="art-col"><span></span><i></i></div>
+              <b class="art-clock">08:00 → 17:42</b>
+            </div>
+            <span class="case__num label">c.04</span>
+          </div>
+          <div class="case__info">
+            <div class="case__top">
+              <h3 class="case__title">PantheOn</h3>
+              <span class="case__year label">2020–22</span>
+            </div>
+            <p class="case__desc">App mobile interno de gestão: clientes, projetos, contratos e lançamento de horas dos colaboradores.</p>
+            <ul class="case__tags label">
+              <li>Mobile</li><li>Gestão</li><li>Accurate</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section skills" id="skills">
+      <header class="sec-head">
+        <span class="sec-head__index label">04</span>
+        <h2 class="sec-head__title">Skills</h2>
+        <span class="sec-head__rule" aria-hidden="true"></span>
+        <span class="sec-head__meta label">// design-tokens.css</span>
+      </header>
+
+      <div class="skills__grid">
+        <div class="skills__group" data-reveal>
+          <h3 class="skills__cat label">/* 01 — design */</h3>
+          <ul class="tokens">
+            <li class="token"><span class="token__key">--figma</span><span class="token__val">uso-diário;</span></li>
+            <li class="token"><span class="token__key">--design-systems</span><span class="token__val">especialidade;</span></li>
+            <li class="token"><span class="token__key">--ux-research</span><span class="token__val">entrevistas + testes;</span></li>
+            <li class="token"><span class="token__key">--prototipagem</span><span class="token__val">alta-fidelidade;</span></li>
+            <li class="token"><span class="token__key">--wireframes</span><span class="token__val">lo-fi → hi-fi;</span></li>
+            <li class="token"><span class="token__key">--hotjar-miro</span><span class="token__val">análise + colab;</span></li>
+            <li class="token"><span class="token__key">--adobe</span><span class="token__val">ps · ai · pr · lr;</span></li>
+          </ul>
+        </div>
+
+        <div class="skills__group" data-reveal>
+          <h3 class="skills__cat label">/* 02 — tecnologia &amp; método */</h3>
+          <ul class="tokens">
+            <li class="token"><span class="token__key">--html-css</span><span class="token__val">fluente;</span></li>
+            <li class="token"><span class="token__key">--java</span><span class="token__val">ex-dev;</span></li>
+            <li class="token"><span class="token__key">--sql-server</span><span class="token__val">consultas;</span></li>
+            <li class="token"><span class="token__key">--scrum</span><span class="token__val">certificado;</span></li>
+            <li class="token"><span class="token__key">--design-thinking</span><span class="token__val">double-diamond;</span></li>
+            <li class="token"><span class="token__key">--metodologia-agil</span><span class="token__val">squads;</span></li>
+            <li class="token"><span class="token__key">--didatica</span><span class="token__val">ex-instrutor senai;</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Formação -->
+      <div class="edu">
+        <h3 class="edu__title label">// formação</h3>
+        <div class="edu__grid">
+          <div class="edu__card" data-reveal>
+            <span class="edu__period label">2020 — 2021</span>
+            <h4>Pós-graduação em User Experience</h4>
+            <p>Universidade Anhembi Morumbi</p>
+          </div>
+          <div class="edu__card" data-reveal>
+            <span class="edu__period label">2016 — 2019</span>
+            <h4>Análise e Desenvolvimento de Sistemas</h4>
+            <p>FATEC — Rio Preto</p>
+          </div>
+        </div>
+        <ul class="edu__certs label" data-reveal>
+          <li>DesignOps Strategy — How Bootcamps</li>
+          <li>Scrum Foundation</li>
+          <li>Adobe XD — Origamid</li>
+          <li>Design Circuit</li>
+          <li>uiBoost — UI Design</li>
+          <li>Bootcamp UX — IGTI</li>
+          <li>Inglês avançado — Fisk</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ CONTATO ============ -->
+    <section class="section contact" id="contato">
+      <header class="sec-head">
+        <span class="sec-head__index label">05</span>
+        <h2 class="sec-head__title">Contato</h2>
+        <span class="sec-head__rule" aria-hidden="true"></span>
+        <span class="sec-head__meta label">// vamos conversar</span>
+      </header>
+
+      <p class="contact__kicker label" data-reveal>Tem um projeto em mente?</p>
+
+      <a href="mailto:rafael.nassifcrestani@gmail.com" class="contact__cta" data-magnetic>
+        <span class="contact__cta-line"><span data-split-chars>VAMOS</span></span>
+        <span class="contact__cta-line contact__cta-line--accent"><span data-split-chars>CONVERSAR</span><span class="contact__cta-arrow" aria-hidden="true">→</span></span>
+      </a>
+
+      <div class="contact__row" data-reveal>
+        <button class="contact__email label" data-copy-email type="button" aria-label="Copiar e-mail">
+          rafael.nassifcrestani@gmail.com
+          <span class="contact__copy-hint" data-copy-hint>[ copiar ]</span>
+        </button>
+        <div class="contact__links label">
+          <a href="https://www.linkedin.com/in/rafael-nassif-crestani/" target="_blank" rel="noopener" data-magnetic>LinkedIn ↗</a>
+          <a href="https://wa.me/5517991806999" target="_blank" rel="noopener" data-magnetic>WhatsApp ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <span class="label">© 2026 Rafael Nassif Crestani</span>
+    <span class="label footer__credit">design &amp; código — GSAP · Three.js</span>
+    <span class="label">José Bonifácio — SP · <span data-clock>--:--</span></span>
+    <button class="footer__top label" data-to-top type="button">voltar ao topo ↑</button>
+  </footer>
+
+  <div class="toast label" data-toast aria-live="polite"></div>
+
+  <!-- ============ SCRIPTS ============ -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="js/main.js?v=2" defer></script>
+
+  <script type="importmap">
+    { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" } }
+  </script>
+  <script type="module" src="js/scene.js?v=2"></script>
+</body>
+</html>
