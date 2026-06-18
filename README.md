@@ -1,6 +1,6 @@
 # Rafael Nassif — Portfólio
 
-**🔗 No ar:** https://rafaelcrestani.github.io/ 2026
+**🔗 No ar:** https://rafaelnassif.com.br
 
 Landing page de portfólio (one-page) para Rafael Nassif Crestani, UX/UI & Product
 Designer. Dark editorial com estética de *blueprint de design system*, animações GSAP
