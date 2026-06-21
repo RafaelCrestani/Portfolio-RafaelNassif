@@ -20,7 +20,7 @@
     href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Fragment+Mono:ital@0;1&display=swap"
     rel="stylesheet" />
 
-  <link rel="stylesheet" href="css/styles.css?v=3" />
+  <link rel="stylesheet" href="css/styles.css?v=4" />
   <script>
     document.documentElement.classList.add('js');
     // Animações ligadas por padrão. ?motion=off entrega a versão estática
@@ -118,7 +118,11 @@
         </h1>
 
         <div class="hero__sub">
-          <p class="hero__role" data-hero-role>UX/UI <em>&amp;</em> Product Designer</p>
+          <p class="hero__role" data-hero-role>
+            <span class="sr-only">UX/UI e Product Designer</span>
+            <span class="hero__role-morph" data-morph aria-hidden="true">UX/UI Designer</span><span
+              class="hero__role-caret" aria-hidden="true"></span>
+          </p>
           <p class="hero__desc" data-hero-desc>
             Busco equilibrar o que é desejável do ponto de vista dos usuários com o que é tecnologicamente e
             economicamente viável para o negócio.
@@ -509,7 +513,7 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
-  <script src="js/main.js?v=2" defer></script>
+  <script src="js/main.js?v=4" defer></script>
 
   <script type="importmap">
     { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" } }

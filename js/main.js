@@ -71,9 +71,51 @@
     if (pre) pre.remove();
   }
 
+  // hero: texto que alterna entre os dois cargos (efeito morph/typewriter)
+  function initRoleMorph() {
+    const el = document.querySelector("[data-morph]");
+    if (!el) return;
+    const phrases = ["UX/UI Designer", "Product Designer"];
+
+    // movimento reduzido: mostra os dois, estático, sem cursor animado
+    if (reduced) {
+      el.textContent = "UX/UI & Product Designer";
+      const caret = document.querySelector(".hero__role-caret");
+      if (caret) caret.style.display = "none";
+      return;
+    }
+
+    const erase = 38;   // ms por caractere apagando
+    const type = 60;    // ms por caractere digitando
+    const hold = 2200;  // pausa com a palavra completa
+    let index = 0;
+    let t;
+
+    function cycle() {
+      const current = phrases[index];
+      const next = phrases[(index + 1) % phrases.length];
+      let i = current.length;
+      (function eraseStep() {
+        el.textContent = current.slice(0, i);
+        if (i-- > 0) { t = setTimeout(eraseStep, erase); return; }
+        let j = 0;
+        (function typeStep() {
+          el.textContent = next.slice(0, j);
+          if (j++ < next.length) { t = setTimeout(typeStep, type); return; }
+          index = (index + 1) % phrases.length;
+          t = setTimeout(cycle, hold);
+        })();
+      })();
+    }
+
+    el.textContent = phrases[0];
+    t = setTimeout(cycle, 2600); // começa após a intro do hero
+  }
+
   startClock();
   initCopyEmail();
   initHeaderState();
+  initRoleMorph();
 
   if (!hasGsap) {
     // CDN bloqueado: página estática, tudo visível
