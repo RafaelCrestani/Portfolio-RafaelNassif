@@ -20,7 +20,7 @@
     href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Fragment+Mono:ital@0;1&display=swap"
     rel="stylesheet" />
 
-  <link rel="stylesheet" href="css/styles.css?v=8" />
+  <link rel="stylesheet" href="css/styles.css?v=10" />
   <script>
     document.documentElement.classList.add('js');
     // Animações ligadas por padrão. ?motion=off entrega a versão estática
@@ -62,8 +62,7 @@
       <a href="#sobre" data-nav-link>Sobre<sup>01</sup></a>
       <a href="#experiencia" data-nav-link>Experiência<sup>02</sup></a>
       <a href="#cases" data-nav-link>Cases<sup>03</sup></a>
-      <a href="#skills" data-nav-link>Skills<sup>04</sup></a>
-      <a href="#contato" data-nav-link>Contato<sup>05</sup></a>
+      <a href="#contato" data-nav-link>Contato<sup>04</sup></a>
     </nav>
 
     <div class="header__meta label">
@@ -84,8 +83,7 @@
       <a href="#sobre" data-nav-link><em>01</em>Sobre</a>
       <a href="#experiencia" data-nav-link><em>02</em>Experiência</a>
       <a href="#cases" data-nav-link><em>03</em>Cases</a>
-      <a href="#skills" data-nav-link><em>04</em>Skills</a>
-      <a href="#contato" data-nav-link><em>05</em>Contato</a>
+      <a href="#contato" data-nav-link><em>04</em>Contato</a>
     </nav>
     <div class="menu__foot label">
       <a href="mailto:rafael.nassifcrestani@gmail.com">rafael.nassifcrestani@gmail.com</a>
@@ -277,6 +275,41 @@
           <span class="xp__arrow" aria-hidden="true">→</span>
         </li>
       </ul>
+
+      <!-- Formação (movida da antiga seção Skills) -->
+      <div class="edu">
+        <h3 class="edu__title label">// formação</h3>
+        <div class="edu__grid">
+          <div class="edu__card" data-reveal>
+            <span class="edu__period label">2020 — 2021</span>
+            <h4>Pós-graduação em User Experience</h4>
+            <p>Universidade Anhembi Morumbi</p>
+          </div>
+          <div class="edu__card" data-reveal>
+            <span class="edu__period label">2016 — 2019</span>
+            <h4>Análise e Desenvolvimento de Sistemas</h4>
+            <p>FATEC — Rio Preto</p>
+          </div>
+        </div>
+        <ul class="edu__certs label" data-reveal>
+          <li>DesignOps Strategy — How Bootcamps</li>
+          <li>Scrum Foundation</li>
+          <li>Adobe XD — Origamid</li>
+          <li>Design Circuit</li>
+          <li>uiBoost — UI Design</li>
+          <li>Bootcamp UX — IGTI</li>
+          <li>Inglês avançado — Fisk</li>
+        </ul>
+      </div>
+
+      <!-- CTA: baixar CV completo -->
+      <div class="cv-download" data-reveal>
+        <a href="cv/rafael-nassif-crestani-cv-2026.pdf" download="Rafael-Nassif-Crestani-CV-2026.pdf"
+          class="cv-btn" data-magnetic>
+          <span class="cv-btn__label">Baixar CV completo</span>
+          <span class="cv-btn__icon" aria-hidden="true">↓</span>
+        </a>
+      </div>
     </section>
 
     <!-- ============ CASES ============ -->
@@ -402,83 +435,10 @@
       </div>
     </section>
 
-    <!-- ============ SKILLS ============ -->
-    <section class="section skills" id="skills">
-      <header class="sec-head">
-        <span class="sec-head__index label">04</span>
-        <h2 class="sec-head__title">Skills</h2>
-        <span class="sec-head__rule" aria-hidden="true"></span>
-        <span class="sec-head__meta label">// design-tokens.css</span>
-      </header>
-
-      <div class="skills__grid">
-        <div class="skills__group" data-reveal>
-          <h3 class="skills__cat label">/* 01 — design */</h3>
-          <ul class="tokens">
-            <li class="token"><span class="token__key">--figma</span><span class="token__val">especialidade;</span></li>
-            <li class="token"><span class="token__key">--design-systems</span><span
-                class="token__val">uso-diário;</span></li>
-            <li class="token"><span class="token__key">--ux-research</span><span class="token__val">entrevistas +
-                testes;</span></li>
-            <li class="token"><span class="token__key">--prototipagem</span><span class="token__val">alta-fidelidade →
-                figma-make;</span></li>
-            <li class="token"><span class="token__key">--wireframes</span><span class="token__val">lo-fi → hi-fi;</span>
-            </li>
-            <li class="token"><span class="token__key">--hotjar-miro</span><span class="token__val">análise +
-                síntese;</span></li>
-            <li class="token"><span class="token__key">--adobe</span><span class="token__val">ps · ai · lr;</span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="skills__group" data-reveal>
-          <h3 class="skills__cat label">/* 02 — Habilidades &amp; tecnologia */</h3>
-          <ul class="tokens">
-            <li class="token"><span class="token__key">--html-css</span><span class="token__val">fluente;</span></li>
-            <li class="token"><span class="token__key">--java</span><span class="token__val">ex-dev;</span></li>
-            <li class="token"><span class="token__key">--metodologia-agil</span><span
-                class="token__val">certificado-scrum;</span></li>
-            <li class="token"><span class="token__key">--design-thinking</span><span
-                class="token__val">double-diamond;</span></li>
-            <li class="token"><span class="token__key">--teamwork</span><span class="token__val">squads-chapters;</span>
-            </li>
-            <li class="token"><span class="token__key">--didatica-oratória</span><span class="token__val">ex-professor
-                senai;</span></li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Formação -->
-      <div class="edu">
-        <h3 class="edu__title label">// formação</h3>
-        <div class="edu__grid">
-          <div class="edu__card" data-reveal>
-            <span class="edu__period label">2020 — 2021</span>
-            <h4>Pós-graduação em User Experience</h4>
-            <p>Universidade Anhembi Morumbi</p>
-          </div>
-          <div class="edu__card" data-reveal>
-            <span class="edu__period label">2016 — 2019</span>
-            <h4>Análise e Desenvolvimento de Sistemas</h4>
-            <p>FATEC — Rio Preto</p>
-          </div>
-        </div>
-        <ul class="edu__certs label" data-reveal>
-          <li>DesignOps Strategy — How Bootcamps</li>
-          <li>Scrum Foundation</li>
-          <li>Adobe XD — Origamid</li>
-          <li>Design Circuit</li>
-          <li>uiBoost — UI Design</li>
-          <li>Bootcamp UX — IGTI</li>
-          <li>Inglês avançado — Fisk</li>
-        </ul>
-      </div>
-    </section>
-
     <!-- ============ CONTATO ============ -->
     <section class="section contact" id="contato">
       <header class="sec-head">
-        <span class="sec-head__index label">05</span>
+        <span class="sec-head__index label">04</span>
         <h2 class="sec-head__title">Contato</h2>
         <span class="sec-head__rule" aria-hidden="true"></span>
         <span class="sec-head__meta label">// vamos conversar</span>
