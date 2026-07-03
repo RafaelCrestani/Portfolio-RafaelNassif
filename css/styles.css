@@ -508,6 +508,9 @@ em { font-style: italic; }
   gap: clamp(1.5rem, 3.5vw, 3.5rem);
 }
 .cases__grid .case:nth-child(even) { margin-top: clamp(0px, 4vw, 56px); }
+/* quando só há um case visível: centraliza o card */
+.cases__grid--single { grid-template-columns: minmax(0, 640px); justify-content: center; }
+.cases__grid--single .case { margin-top: 0; }
 
 .case {
   position: relative;

@@ -20,7 +20,7 @@
     href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Fragment+Mono:ital@0;1&display=swap"
     rel="stylesheet" />
 
-  <link rel="stylesheet" href="css/styles.css?v=10" />
+  <link rel="stylesheet" href="css/styles.css?v=11" />
   <script>
     document.documentElement.classList.add('js');
     // Animações ligadas por padrão. ?motion=off entrega a versão estática
@@ -179,7 +179,7 @@
 
         <figure class="about__portrait" data-reveal>
           <div class="portrait">
-            <img src="img/rafael.jpg?v=1" alt="Retrato de Rafael Nassif Crestani" class="portrait__img"
+            <img src="img/rafael.jpg?v=2" alt="Retrato de Rafael Nassif Crestani" class="portrait__img"
               loading="lazy" decoding="async" width="1200" height="1200" />
             <span class="portrait__grain" aria-hidden="true"></span>
             <span class="portrait__corner portrait__corner--tl" aria-hidden="true"></span>
@@ -316,10 +316,12 @@
         <span class="sec-head__index label">03</span>
         <h2 class="sec-head__title">Cases selecionados</h2>
         <span class="sec-head__rule" aria-hidden="true"></span>
-        <span class="sec-head__meta label">// 2020 — 2023</span>
+        <span class="sec-head__meta label">// 2025</span>
       </header>
 
-      <div class="cases__grid">
+      <!-- Apenas o Case 1 está visível. Para reexibir os demais: remova o atributo "hidden"
+           dos <article> abaixo e a classe "cases__grid--single" deste container. -->
+      <div class="cases__grid cases__grid--single">
 
         <!-- Case 1 — Simulação de Crédito (agência de fomento) · página interna -->
         <article class="case case--link" data-reveal data-tilt>
@@ -351,7 +353,7 @@
         </article>
 
         <!-- Case 2 — Técnico Nota 10 -->
-        <article class="case" data-reveal data-tilt>
+        <article class="case" data-reveal data-tilt hidden>
           <div class="case__visual case__visual--nota10" aria-hidden="true">
             <div class="case-art case-art--os">
               <div class="art-card art-card--1"><i></i><i></i><b>OS-2210</b></div>
@@ -377,7 +379,7 @@
         </article>
 
         <!-- Case 3 — Recuperação de crédito -->
-        <article class="case" data-reveal data-tilt>
+        <article class="case" data-reveal data-tilt hidden>
           <div class="case__visual case__visual--bv" aria-hidden="true">
             <div class="case-art case-art--score">
               <svg viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -406,7 +408,7 @@
         </article>
 
         <!-- Case 4 — PantheOn -->
-        <article class="case" data-reveal data-tilt>
+        <article class="case" data-reveal data-tilt hidden>
           <div class="case__visual case__visual--pantheon" aria-hidden="true">
             <div class="case-art case-art--kanban">
               <div class="art-col"><span></span><i></i><i></i></div>
