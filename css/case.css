@@ -5,6 +5,10 @@
 
 .case-page { background: var(--bg); }
 
+/* os metas das seções deste case são longos: permite quebrar linha
+   em vez de estourar o viewport em larguras intermediárias (~560-680px) */
+.case-page .sec-head { flex-wrap: wrap; row-gap: 0.4rem; }
+
 /* offset do header fixo para âncoras */
 html { scroll-padding-top: 90px; }
 
@@ -346,4 +350,8 @@ html { scroll-padding-top: 90px; }
   .cflow { grid-template-columns: 1fr; }
   .ctrade__row { grid-template-columns: 1fr; gap: 0.5rem; }
   .chero__meta { grid-template-columns: 1fr; }
+
+  /* "CONVERSAR" tem 9 chars em fonte expandida: dimensiona pela largura
+     real da tela para nunca estourar o viewport (≈9.6px de linha por 1px de fonte) */
+  .cnav__cta-line { font-size: clamp(1.5rem, calc((100vw - 3rem) / 9.6), 2.6rem); }
 }

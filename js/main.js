@@ -469,6 +469,7 @@
         const ringY = gsap.quickTo(ring, "y", { duration: 0.45, ease: "power3.out" });
 
         window.addEventListener("pointermove", (e) => {
+          cursor.classList.add("is-live");
           dotX(e.clientX); dotY(e.clientY);
           ringX(e.clientX); ringY(e.clientY);
         }, { passive: true });

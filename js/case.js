@@ -159,7 +159,7 @@
         const dotY = gsap.quickTo(dot, "y", { duration: 0.12, ease: "power2.out" });
         const ringX = gsap.quickTo(ring, "x", { duration: 0.45, ease: "power3.out" });
         const ringY = gsap.quickTo(ring, "y", { duration: 0.45, ease: "power3.out" });
-        window.addEventListener("pointermove", (e) => { dotX(e.clientX); dotY(e.clientY); ringX(e.clientX); ringY(e.clientY); }, { passive: true });
+        window.addEventListener("pointermove", (e) => { cursor.classList.add("is-live"); dotX(e.clientX); dotY(e.clientY); ringX(e.clientX); ringY(e.clientY); }, { passive: true });
         document.querySelectorAll("a, button, .compare__card, .cflow__step, .cduo__card").forEach((el) => {
           el.addEventListener("pointerenter", () => cursor.classList.add("is-active"));
           el.addEventListener("pointerleave", () => cursor.classList.remove("is-active"));

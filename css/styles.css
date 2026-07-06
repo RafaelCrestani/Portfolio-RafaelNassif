@@ -140,7 +140,11 @@ em { font-style: italic; }
    ============================================================ */
 .cursor { display: none; }
 @media (pointer: fine) {
-  .cursor { display: block; position: fixed; top: 0; left: 0; z-index: 9999; pointer-events: none; }
+  .cursor {
+    display: block; position: fixed; top: 0; left: 0; z-index: 9999; pointer-events: none;
+    opacity: 0; transition: opacity 0.25s;
+  }
+  .cursor.is-live { opacity: 1; }
   .cursor__dot {
     position: fixed; top: -3px; left: -3px; width: 6px; height: 6px;
     background: var(--accent); border-radius: 50%;
@@ -791,6 +795,12 @@ em { font-style: italic; }
   .sec-head__meta { display: none; }
   .contact__row { flex-direction: column; align-items: flex-start; }
   .hero__bottom .hero__coords { display: none; }
+
+  /* telas muito estreitas (~320px): título de seção, e-mail e menu
+     escalam pela largura da tela para nunca estourar o viewport */
+  .sec-head__title { font-size: clamp(1.4rem, 7.4vw, 1.9rem); }
+  .contact__email { flex-wrap: wrap; }
+  .menu__nav a { font-size: clamp(1.8rem, 8.6vw, 4.2rem); }
 }
 
 /* ============================================================
