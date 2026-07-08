@@ -673,6 +673,7 @@ em { font-style: italic; }
 .cv-btn__icon { transition: transform 0.35s var(--ease-out); }
 .cv-btn:hover { background: var(--accent); border-color: var(--accent); color: var(--dark); }
 .cv-btn:hover .cv-btn__icon { transform: translateY(4px); }
+.cv-btn--ext:hover .cv-btn__icon { transform: translate(3px, -3px); }
 
 /* ---- formação ---- */
 .edu__title { color: var(--accent); margin-bottom: 1.4rem; }
