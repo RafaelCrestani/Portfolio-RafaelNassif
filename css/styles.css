@@ -140,26 +140,51 @@ em { font-style: italic; }
    ============================================================ */
 .cursor { display: none; }
 @media (pointer: fine) {
+  /* esconde o cursor nativo só quando o JS confirma que o custom está ativo */
+  html.has-cursor * { cursor: none !important; }
+
   .cursor {
     display: block; position: fixed; top: 0; left: 0; z-index: 9999; pointer-events: none;
     opacity: 0; transition: opacity 0.25s;
   }
   .cursor.is-live { opacity: 1; }
+
+  /* ponto central preciso */
   .cursor__dot {
     position: fixed; top: -3px; left: -3px; width: 6px; height: 6px;
     background: var(--accent); border-radius: 50%;
+    transition: width 0.25s, height 0.25s, top 0.25s, left 0.25s, opacity 0.25s;
   }
-  .cursor__ring {
-    position: fixed; top: -17px; left: -17px; width: 34px; height: 34px;
-    border: 1px solid rgba(240, 233, 221, 0.45); border-radius: 50%;
-    transition: transform 0.3s var(--ease-out), border-color 0.3s, background-color 0.3s;
+
+  /* reticle de câmera: 4 colchetes de canto que enquadram o ponteiro */
+  .cursor__reticle { position: fixed; top: 0; left: 0; }
+  .cursor__frame {
+    position: absolute; top: -17px; left: -17px; width: 34px; height: 34px;
+    transition: transform 0.32s var(--ease-out);
   }
-  .cursor.is-active .cursor__ring {
-    transform: scale(1.9);
-    border-color: var(--accent);
-    background: rgba(255, 77, 0, 0.08);
+  .cursor__corner {
+    position: absolute; width: 9px; height: 9px;
+    border: 1.5px solid rgba(240, 233, 221, 0.6);
+    transition: border-color 0.3s, width 0.3s, height 0.3s;
   }
-  .cursor.is-down .cursor__ring { transform: scale(0.8); }
+  .cursor__corner--tl { top: 0; left: 0; border-right: 0; border-bottom: 0; }
+  .cursor__corner--tr { top: 0; right: 0; border-left: 0; border-bottom: 0; }
+  .cursor__corner--bl { bottom: 0; left: 0; border-right: 0; border-top: 0; }
+  .cursor__corner--br { bottom: 0; right: 0; border-left: 0; border-top: 0; }
+
+  /* hover em clicável: "trava o foco" — enquadramento fecha e fica laranja */
+  .cursor.is-active .cursor__frame { transform: scale(0.6); }
+  .cursor.is-active .cursor__corner { border-color: var(--accent); width: 11px; height: 11px; }
+  .cursor.is-active .cursor__dot { width: 8px; height: 8px; top: -4px; left: -4px; }
+
+  /* clique: obturador */
+  .cursor.is-down .cursor__frame { transform: scale(0.82); }
+  .cursor.is-down .cursor__dot { opacity: 0.4; }
+
+  /* sobre elementos com fundo laranja: inverte p/ escuro (senão o cursor
+     laranja some no laranja). Vem depois de is-active p/ vencer a cor. */
+  .cursor.is-invert .cursor__corner { border-color: var(--dark); }
+  .cursor.is-invert .cursor__dot { background: var(--dark); }
 }
 
 /* ============================================================

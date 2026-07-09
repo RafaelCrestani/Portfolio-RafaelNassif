@@ -461,23 +461,29 @@
     if (finePointer && !reduced) {
       const cursor = document.querySelector(".cursor");
       const dot = document.querySelector(".cursor__dot");
-      const ring = document.querySelector(".cursor__ring");
-      if (cursor && dot && ring) {
-        const dotX = gsap.quickTo(dot, "x", { duration: 0.12, ease: "power2.out" });
-        const dotY = gsap.quickTo(dot, "y", { duration: 0.12, ease: "power2.out" });
-        const ringX = gsap.quickTo(ring, "x", { duration: 0.45, ease: "power3.out" });
-        const ringY = gsap.quickTo(ring, "y", { duration: 0.45, ease: "power3.out" });
+      const reticle = document.querySelector(".cursor__reticle");
+      if (cursor && dot && reticle) {
+        docEl.classList.add("has-cursor");
+        const dotX = gsap.quickTo(dot, "x", { duration: 0.1, ease: "power3.out" });
+        const dotY = gsap.quickTo(dot, "y", { duration: 0.1, ease: "power3.out" });
+        const rX = gsap.quickTo(reticle, "x", { duration: 0.36, ease: "power3.out" });
+        const rY = gsap.quickTo(reticle, "y", { duration: 0.36, ease: "power3.out" });
 
         window.addEventListener("pointermove", (e) => {
           cursor.classList.add("is-live");
           dotX(e.clientX); dotY(e.clientY);
-          ringX(e.clientX); ringY(e.clientY);
+          rX(e.clientX); rY(e.clientY);
         }, { passive: true });
 
         const hoverables = "a, button, .xp__row, .case, .token";
         document.querySelectorAll(hoverables).forEach((el) => {
           el.addEventListener("pointerenter", () => cursor.classList.add("is-active"));
           el.addEventListener("pointerleave", () => cursor.classList.remove("is-active"));
+        });
+        // elementos que preenchem de laranja no hover → cursor inverte p/ escuro
+        document.querySelectorAll(".xp__row, .cv-btn").forEach((el) => {
+          el.addEventListener("pointerenter", () => cursor.classList.add("is-invert"));
+          el.addEventListener("pointerleave", () => cursor.classList.remove("is-invert"));
         });
         window.addEventListener("pointerdown", () => cursor.classList.add("is-down"));
         window.addEventListener("pointerup", () => cursor.classList.remove("is-down"));
